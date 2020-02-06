@@ -1,4 +1,5 @@
 FROM node:alpine as builder
+sudo usermod -aG docker ${USER}
 WORKDIR '/app'
 COPY package.json .
 RUN npm install

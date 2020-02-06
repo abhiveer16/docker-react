@@ -1,5 +1,5 @@
 FROM node:alpine as builder
-sudo usermod -aG docker ${USER}
+sudo usermod -aG docker jenkins
 WORKDIR '/app'
 COPY package.json .
 RUN npm install
